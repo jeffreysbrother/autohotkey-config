@@ -31,6 +31,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; also removes problems in certain applications.
 
 
+;cleaned up unnecessary scripts (by james cool)
 
 
 #Persistent

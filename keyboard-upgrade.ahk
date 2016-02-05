@@ -18,8 +18,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;     Backspace and Del     - N, M
 ;
 ;     Insert                - B
-;     Close tab, window     - W, E
-;     Esc                   - R
 ;     Next, previous tab    - Tab, Q
 ;     Undo, redo            - , and .
 ;
@@ -82,13 +80,6 @@ Capslock & y up::SendInput {Blind}{PgUp Up}
 Capslock & h::SendInput {Blind}{PgDn Down}
 Capslock & h up::SendInput {Blind}{PgDn Up}
 
-
-
-; Capslock + wer (close tab or window, press esc)
-
-Capslock & w::SendInput {Ctrl down}{F4}{Ctrl up}
-Capslock & e::SendInput {Alt down}{F4}{Alt up}
-Capslock & r::SendInput {Blind}{Esc Down}
 
 
 ; Capslock + nm (insert, backspace, del)

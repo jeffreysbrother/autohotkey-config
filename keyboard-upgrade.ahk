@@ -10,13 +10,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;
 ; Functionality:
 ; - Deactivates capslock for normal (accidental) use.
-; - Hold Capslock and drag anywhere in a window to move it (not just the title bar).
 ; - Access the following functions when pressing Capslock:
 ;     Cursor keys           - J, K, L, I
 ;     PgDn, PgUp, End, Home - H, Y, O, U
 ;
 ; To use capslock as you normally would, you can press WinKey + Capslock
-
 
 ; This script is mostly assembled from modified versions of the following awesome scripts:
 ;
@@ -25,18 +23,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; - Does not need register remapping of AppsKey using SharpKeys.
 ; - Uses normal cursor key layout
 ; - Added more hotkeys for insert, undo, redo etc.
-;
-; # Get the Linux Alt+Window Drag Functionality in Windows: http://www.howtogeek.com/howto/windows-vista/get-the-linux-altwindow-drag-functionality-in-windows/
-; Changes: The only change was using Capslock instead of Alt. This
-; also removes problems in certain applications.
-
 
 ;cleaned up unnecessary scripts (by james cool)
 
-
 #Persistent
 SetCapsLockState, AlwaysOff
-
 
 
 ; Capslock + jkli (left, down, up, right)
@@ -54,11 +45,9 @@ Capslock & l::Send {Blind}{Right DownTemp}
 Capslock & l up::Send {Blind}{Right Up}
 
 
-
 ; added by James Cool: Capslock + backspace (delete)
 Capslock & backspace::Send {Blind}{delete DownTemp}
 Capslock & backspace up::Send {Blind}{delete Up}
-
 
 
 ; Capslock + hyuo (pgdown, pgup, home, end)
@@ -74,7 +63,6 @@ Capslock & y up::SendInput {Blind}{PgUp Up}
 
 Capslock & h::SendInput {Blind}{PgDn Down}
 Capslock & h up::SendInput {Blind}{PgDn Up}
-
 
 
 ; Make Win Key + Capslock work like Capslock
